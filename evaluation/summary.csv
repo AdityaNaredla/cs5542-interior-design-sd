@@ -1,0 +1,4 @@
+condition,clip_alignment_mean,clip_alignment_std,aesthetic_mean,aesthetic_std,lpips_diversity_mean,lpips_diversity_std
+baseline,0.255,0.0165,0.2503,0.0215,0.6689,0.0285
+structured,0.276,0.0138,0.2606,0.0149,0.676,0.0413
+controlnet,0.2755,0.016,0.2625,0.0187,0.4979,0.0442

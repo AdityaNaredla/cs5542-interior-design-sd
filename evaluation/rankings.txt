@@ -1,0 +1,85 @@
+
+======================================================================
+TOP 5 BY CLIP ALIGNMENT (showcase candidates)
+======================================================================
+  room_017  controlnet  seed=1337  align=0.3132  aesth=0.2726  | living room, industrial loft
+  room_017  structured  seed=42  align=0.3106  aesth=0.2698  | living room, industrial loft
+  room_017  controlnet  seed=42  align=0.3102  aesth=0.2704  | living room, industrial loft
+  room_019  structured  seed=1337  align=0.3015  aesth=0.2556  | office, rustic farmhouse
+  room_002  controlnet  seed=1337  align=0.2972  aesth=0.2814  | bathroom, modern minimalist
+
+======================================================================
+BOTTOM 5 BY CLIP ALIGNMENT (failure case candidates)
+======================================================================
+  room_020  baseline    seed=1337  align=0.2248  aesth=0.2276  | office, modern minimalist
+  room_019  baseline    seed=1337  align=0.2250  aesth=0.2276  | office, rustic farmhouse
+  room_010  baseline    seed=1337  align=0.2311  aesth=0.2166  | dining room, industrial loft
+  room_012  baseline    seed=42  align=0.2325  aesth=0.2652  | kitchen, rustic farmhouse
+  room_017  baseline    seed=1337  align=0.2339  aesth=0.2514  | living room, industrial loft
+
+======================================================================
+BEST & WORST — BASELINE
+======================================================================
+  Best:
+  room_002  baseline    seed=1337  align=0.2852  aesth=0.2765  | bathroom, modern minimalist
+  room_000  baseline    seed=1337  align=0.2812  aesth=0.2765  | bathroom, modern minimalist
+  room_002  baseline    seed=42  align=0.2803  aesth=0.2759  | bathroom, modern minimalist
+  Worst:
+  room_020  baseline    seed=1337  align=0.2248  aesth=0.2276  | office, modern minimalist
+  room_019  baseline    seed=1337  align=0.2250  aesth=0.2276  | office, rustic farmhouse
+  room_010  baseline    seed=1337  align=0.2311  aesth=0.2166  | dining room, industrial loft
+
+======================================================================
+BEST & WORST — STRUCTURED
+======================================================================
+  Best:
+  room_017  structured  seed=42  align=0.3106  aesth=0.2698  | living room, industrial loft
+  room_019  structured  seed=1337  align=0.3015  aesth=0.2556  | office, rustic farmhouse
+  room_017  structured  seed=1337  align=0.2960  aesth=0.2643  | living room, industrial loft
+  Worst:
+  room_008  structured  seed=1337  align=0.2430  aesth=0.2174  | classroom, bohemian
+  room_008  structured  seed=42  align=0.2435  aesth=0.2402  | classroom, bohemian
+  room_018  structured  seed=42  align=0.2567  aesth=0.2784  | office, contemporary
+
+======================================================================
+BEST & WORST — CONTROLNET
+======================================================================
+  Best:
+  room_017  controlnet  seed=1337  align=0.3132  aesth=0.2726  | living room, industrial loft
+  room_017  controlnet  seed=42  align=0.3102  aesth=0.2704  | living room, industrial loft
+  room_002  controlnet  seed=1337  align=0.2972  aesth=0.2814  | bathroom, modern minimalist
+  Worst:
+  room_020  controlnet  seed=1337  align=0.2446  aesth=0.2686  | office, modern minimalist
+  room_011  controlnet  seed=1337  align=0.2447  aesth=0.2753  | dining room, japandi
+  room_020  controlnet  seed=42  align=0.2478  aesth=0.2623  | office, modern minimalist
+
+======================================================================
+TOP 5 ROOMS — STRUCTURED IMPROVED MOST OVER BASELINE
+======================================================================
+  room_019  +0.0553  (base=0.241 → struct=0.296)  | office, rustic farmhouse
+  room_017  +0.0520  (base=0.251 → struct=0.303)  | living room, industrial loft
+  room_010  +0.0458  (base=0.236 → struct=0.282)  | dining room, industrial loft
+  room_020  +0.0352  (base=0.242 → struct=0.277)  | office, modern minimalist
+  room_011  +0.0346  (base=0.238 → struct=0.272)  | dining room, japandi
+
+======================================================================
+BOTTOM 5 ROOMS — STRUCTURED DID NOT HELP / HURT BASELINE
+======================================================================
+  room_008  -0.0162  (base=0.259 → struct=0.243)  | classroom, bohemian
+  room_002  -0.0138  (base=0.283 → struct=0.269)  | bathroom, modern minimalist
+  room_000  -0.0056  (base=0.279 → struct=0.274)  | bathroom, modern minimalist
+  room_007  -0.0043  (base=0.269 → struct=0.265)  | classroom, art deco
+  room_001  +0.0076  (base=0.274 → struct=0.282)  | bathroom, industrial loft
+
+======================================================================
+SUGGESTED SLIDE PICKS
+======================================================================
+Showcase (best comparisons to feature on Results slide):
+  room_001  | bathroom, industrial loft  (all conditions scored >= 0.274)
+  room_000  | bathroom, modern minimalist  (all conditions scored >= 0.270)
+  room_002  | bathroom, modern minimalist  (all conditions scored >= 0.269)
+
+Failure cases (for limitations slide):
+  room_020 (baseline)  align=0.225  | office, modern minimalist
+  room_019 (baseline)  align=0.225  | office, rustic farmhouse
+  room_010 (baseline)  align=0.231  | dining room, industrial loft

@@ -1,0 +1,38 @@
+# NOTE: Install torch and torchvision separately BEFORE this file,
+# using the CUDA-matched command from https://pytorch.org/get-started/locally/
+# Example (CUDA 12.1):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# Core Stable Diffusion stack
+diffusers>=0.27.0
+transformers>=4.38.0
+accelerate>=0.27.0
+safetensors>=0.4.0
+
+# ControlNet preprocessing (edge detection, depth, MLSD lines)
+controlnet-aux>=0.0.7
+opencv-python>=4.8.0
+
+# Memory optimization (helpful for <12GB VRAM)
+xformers>=0.0.23
+
+# Image handling
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Evaluation metrics
+lpips>=0.1.4
+scikit-image>=0.22.0
+open-clip-torch>=2.24.0
+# Data handling
+pandas>=2.0.0
+
+# Progress bars, plotting, notebooks
+tqdm>=4.66.0
+matplotlib>=3.8.0
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Optional: for bonus multimodal extension
+# elevenlabs>=1.0.0
+# moviepy>=1.0.3

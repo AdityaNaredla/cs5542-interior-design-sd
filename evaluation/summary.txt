@@ -1,0 +1,23 @@
+CS 5542 — Interior Design Generation: Evaluation Summary
+======================================================================
+
+Rooms evaluated: 19
+Conditions: baseline, structured, controlnet
+Seeds per condition: 2
+
+Per-condition means:
+            clip_alignment_mean  clip_alignment_std  aesthetic_mean  aesthetic_std  lpips_diversity_mean  lpips_diversity_std
+condition                                                                                                                    
+baseline                 0.2550              0.0165          0.2503         0.0215                0.6689               0.0285
+structured               0.2760              0.0138          0.2606         0.0149                0.6760               0.0413
+controlnet               0.2755              0.0160          0.2625         0.0187                0.4979               0.0442
+
+Deltas vs baseline:
+  structured:
+    alignment delta:   +0.0210
+    aesthetic delta:   +0.0103
+    diversity delta:   +0.0071
+  controlnet:
+    alignment delta:   +0.0205
+    aesthetic delta:   +0.0122
+    diversity delta:   -0.1710
